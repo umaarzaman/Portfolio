@@ -73,7 +73,7 @@ const About = () => {
               className="md:col-span-2 aspect-video md:aspect-[21/9] rounded-[3rem] overflow-hidden relative group glass-morphism border border-white/10"
             >
               <img 
-                src="/profile.png" 
+                src="./profile.png" 
                 alt="Umar Farooq" 
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-60"
               />

@@ -27,7 +27,7 @@ const Hero = () => {
           >
             <div className="absolute inset-0 bg-accent-blue/30 rounded-full blur-2xl animate-pulse"></div>
             <img 
-              src="/profile.png" 
+              src="./profile.png" 
               alt="Umar Farooq" 
               className="relative w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-white/10 glass object-cover"
             />
