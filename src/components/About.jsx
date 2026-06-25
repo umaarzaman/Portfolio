@@ -1,32 +1,36 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { GraduationCap, Code2, Rocket, Heart } from './Icons';
+import { GraduationCap, Code2, Brain, Rocket } from './Icons';
 
 const About = () => {
   const cards = [
     {
       icon: <GraduationCap className="text-accent-blue" size={32} />,
       title: "Academic Excellence",
-      subtitle: "BS Computer Science",
-      desc: "Currently pursuing BSCS at a top-tier university, maintaining a focus on core engineering principles."
+      subtitle: "UET Mardan (2023 - Present)",
+      desc: "Pursuing BS in Computer Science while maintaining a 3.5 GPA and focusing on core software engineering principles.",
+      glowClass: "glow-border-hover"
     },
     {
       icon: <Code2 className="text-accent-cyan" size={32} />,
       title: "Full Stack Mastery",
-      subtitle: "MERN Specialist",
-      desc: "Building end-to-end applications with a focus on clean code, performance, and user-centric design."
+      subtitle: "Next.js & MERN",
+      desc: "Building production-grade applications with Next.js, Node.js, Express, MongoDB, secure JWT auth, and REST APIs.",
+      glowClass: "glow-border-hover-cyan"
     },
     {
-      icon: <Rocket className="text-accent-purple" size={32} />,
-      title: "Future-Ready Tech",
-      subtitle: "AI & Automation",
-      desc: "Exploring the frontiers of AI to build smarter, more efficient digital experiences and automated workflows."
+      icon: <Brain className="text-accent-purple" size={32} />,
+      title: "AI & LLM Integration",
+      subtitle: "Applied AI Specialist",
+      desc: "Integrating models (Claude, OpenAI) using prompt engineering and structured outputs to build smart agents.",
+      glowClass: "glow-border-hover-purple"
     },
     {
-      icon: <Heart className="text-accent-pink" size={32} />,
-      title: "User Experience",
-      subtitle: "UI/UX Designer",
-      desc: "A designer's eye combined with a developer's mind. Crafting interfaces that are both beautiful and functional."
+      icon: <Rocket className="text-accent-pink" size={32} />,
+      title: "Creative Frontend",
+      subtitle: "3D & Interactive Web",
+      desc: "Crafting immersive 3D web experiences using Three.js, GSAP, and Framer Motion with premium dark glassmorphism.",
+      glowClass: "glow-border-hover-pink"
     }
   ];
 
@@ -40,6 +44,7 @@ const About = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
+            <span className="text-xs font-black text-accent-blue uppercase tracking-[0.3em] mb-4 block">01 // Profile</span>
             <h2 className="text-5xl md:text-7xl font-black mb-10 tracking-tighter leading-tight">
               Crafting <br />
               <span className="text-gradient">Meaningful Impact</span>
@@ -70,7 +75,7 @@ const About = () => {
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              className="md:col-span-2 aspect-video md:aspect-[21/9] rounded-[3rem] overflow-hidden relative group glass-morphism border border-white/10"
+              className="md:col-span-2 aspect-video md:aspect-[21/9] rounded-[3rem] overflow-hidden relative group glass-morphism border border-white/5"
             >
               <img 
                 src="./profile.png" 
@@ -92,9 +97,9 @@ const About = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: i * 0.1 }}
                 whileHover={{ y: -10, scale: 1.02 }}
-                className="p-10 glass-morphism rounded-[2.5rem] group hover:border-accent-blue/30 transition-all duration-500"
+                className={`p-10 glass-morphism rounded-[2.5rem] group ${card.glowClass} transition-all duration-500`}
               >
-                <div className="mb-8 p-5 bg-white/5 rounded-2xl w-fit group-hover:scale-110 group-hover:bg-white/10 transition-all duration-500">
+                <div className="mb-8 p-5 bg-white/5 rounded-2xl w-fit group-hover:scale-110 group-hover:bg-white/10 transition-all duration-500 border border-white/5">
                   {card.icon}
                 </div>
                 <div className="text-xs font-black text-accent-blue uppercase tracking-[0.2em] mb-2 opacity-70">

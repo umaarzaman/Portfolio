@@ -7,37 +7,38 @@ const Hero = () => {
     <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
       {/* Background Animation */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-accent-blue/20 rounded-full blur-[120px] animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-accent-purple/20 rounded-full blur-[120px] animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-grid opacity-[0.15]"></div>
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/0 via-primary/50 to-primary"></div>
+        <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-accent-blue/15 rounded-full blur-[150px] animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-[600px] h-[600px] bg-accent-purple/15 rounded-full blur-[150px] animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-grid opacity-[0.08]"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/50 to-primary"></div>
+        <div className="vignette-overlay"></div>
       </div>
 
       <div className="container mx-auto px-6 relative z-10 text-center">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 45 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          transition={{ duration: 1.4, ease: "easeOut" }}
         >
           <motion.div
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.8 }}
             className="relative inline-block mb-8"
           >
             <div className="absolute inset-0 bg-accent-blue/30 rounded-full blur-2xl animate-pulse"></div>
             <img 
               src="./profile.png" 
               alt="Umar Farooq" 
-              className="relative w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-white/10 glass object-cover"
+              className="relative w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-white/5 glass object-cover"
             />
           </motion.div>
           
           <motion.span 
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.2 }}
-            className="px-6 py-2 rounded-full bg-white/5 border border-white/10 text-accent-cyan text-sm font-bold mb-8 block w-fit mx-auto backdrop-blur-md"
+            transition={{ delay: 0.4, duration: 1 }}
+            className="px-6 py-2 rounded-full bg-white/5 border border-white/5 text-accent-cyan text-xs font-black uppercase tracking-[0.25em] mb-8 block w-fit mx-auto backdrop-blur-md"
           >
             🚀 Open for freelance opportunities
           </motion.span>
@@ -48,8 +49,7 @@ const Hero = () => {
           </h1>
           
           <p className="text-lg md:text-2xl text-slate-400 max-w-3xl mx-auto mb-12 leading-relaxed font-medium">
-            I'm <span className="text-white font-bold">Umar Farooq</span>. I craft high-performance web applications, 
-            intelligent AI systems, and scalable digital solutions with a focus on impact.
+            I'm <span className="text-white font-bold">Umar Farooq</span>. A Full-Stack Developer crafting interactive 3D/creative web experiences and intelligent, AI-integrated applications.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">

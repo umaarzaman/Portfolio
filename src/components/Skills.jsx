@@ -4,24 +4,34 @@ import { motion } from 'framer-motion';
 const Skills = () => {
   const skillCategories = [
     {
+      title: "AI / LLM Integration",
+      skills: ["Claude API", "OpenAI API", "Prompt Engineering", "Structured Outputs"],
+      color: "from-accent-purple/20 to-accent-cyan/20",
+      span: "lg:col-span-2 md:col-span-2 col-span-1"
+    },
+    {
       title: "Frontend Development",
-      skills: ["React.js", "JavaScript (ES6+)", "Tailwind CSS", "Framer Motion", "HTML5/CSS3", "Next.js (Learning)"],
-      color: "from-accent-blue/20 to-accent-cyan/20"
+      skills: ["React.js", "Next.js", "Three.js", "GSAP", "Tailwind CSS", "Framer Motion", "HTML5/CSS3"],
+      color: "from-accent-blue/20 to-accent-cyan/20",
+      span: "col-span-1"
     },
     {
       title: "Backend & Systems",
-      skills: ["Node.js", "Express.js", "RESTful APIs", "JWT Auth", "System Design", "Microservices"],
-      color: "from-accent-purple/20 to-accent-pink/20"
+      skills: ["Node.js", "Express.js", "RESTful APIs", "JWT Auth", "System Design"],
+      color: "from-accent-cyan/20 to-accent-blue/20",
+      span: "col-span-1"
     },
     {
-      title: "Data Management",
-      skills: ["MongoDB", "Mongoose", "PostgreSQL (Basic)", "Firebase", "Redis (Basic)"],
-      color: "from-accent-cyan/20 to-accent-blue/20"
+      title: "Databases & Caching",
+      skills: ["MongoDB", "Mongoose", "PostgreSQL", "Firebase", "Redis"],
+      color: "from-accent-pink/20 to-accent-purple/20",
+      span: "col-span-1"
     },
     {
       title: "DevOps & Tools",
-      skills: ["Git & GitHub", "Docker (Basic)", "Vite / Webpack", "Postman", "CI/CD", "AWS (Basic)"],
-      color: "from-accent-pink/20 to-accent-purple/20"
+      skills: ["Git & GitHub", "Vercel", "Streamlit", "Vite", "Postman", "VS Code"],
+      color: "from-accent-blue/20 to-accent-purple/20",
+      span: "col-span-1"
     }
   ];
 
@@ -34,6 +44,7 @@ const Skills = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
+            <span className="text-xs font-black text-accent-cyan uppercase tracking-[0.3em] mb-4 block text-center">02 // Stack</span>
             <h2 className="text-5xl md:text-7xl font-black mb-6 tracking-tighter">
               Technical <span className="text-gradient">Powerhouse</span>
             </h2>
@@ -43,7 +54,7 @@ const Skills = () => {
           </motion.div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-10">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {skillCategories.map((category, i) => (
             <motion.div
               key={category.title}
@@ -51,7 +62,7 @@ const Skills = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: i * 0.1 }}
-              className={`p-10 glass-morphism rounded-[2.5rem] border border-white/5 relative group overflow-hidden`}
+              className={`p-10 glass-morphism rounded-[2.5rem] border border-white/5 relative group overflow-hidden ${category.span}`}
             >
               <div className={`absolute inset-0 bg-gradient-to-br ${category.color} opacity-0 group-hover:opacity-100 transition-opacity duration-700`}></div>
               

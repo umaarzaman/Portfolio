@@ -20,11 +20,35 @@
 
 @layer components {
   .glass {
-    @apply bg-white/5 backdrop-blur-xl border border-white/10;
+    @apply bg-black/40 backdrop-blur-xl border border-white/5;
   }
   
   .glass-morphism {
-    @apply bg-white/5 backdrop-blur-md border border-white/10 shadow-[0_8px_32px_0_rgba(31,38,135,0.37)];
+    @apply bg-[#07070b]/60 backdrop-blur-xl border border-white/5 shadow-[0_12px_48px_0_rgba(0,0,0,0.8)];
+  }
+
+  .vignette-overlay {
+    @apply absolute inset-0 pointer-events-none z-10;
+    background: radial-gradient(circle, transparent 30%, rgba(3, 3, 3, 0.75) 100%);
+  }
+
+  .glow-border-hover {
+    @apply transition-all duration-500;
+  }
+  .glow-border-hover:hover {
+    @apply border-accent-blue/30 shadow-[0_0_30px_rgba(59,130,246,0.15)];
+  }
+  
+  .glow-border-hover-purple:hover {
+    @apply border-accent-purple/30 shadow-[0_0_30px_rgba(139,92,246,0.15)];
+  }
+
+  .glow-border-hover-cyan:hover {
+    @apply border-accent-cyan/30 shadow-[0_0_30px_rgba(34,211,238,0.15)];
+  }
+
+  .glow-border-hover-pink:hover {
+    @apply border-accent-pink/30 shadow-[0_0_30px_rgba(244,114,182,0.15)];
   }
 
   .text-gradient {

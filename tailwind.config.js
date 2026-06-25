@@ -10,8 +10,8 @@ export default {
         sans: ['Outfit', 'Inter', 'sans-serif'],
       },
       colors: {
-        primary: "#020617",
-        secondary: "#0f172a",
+        primary: "#030303", // Deep obsidian black
+        secondary: "#09090E", // Dark obsidian gray
         accent: {
           blue: "#3b82f6",
           purple: "#8b5cf6",
